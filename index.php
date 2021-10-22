@@ -1,5 +1,5 @@
 <?php 
-    require_once __DIR__ . "/partials/database.php"; 
+    require_once __DIR__ . "/database.php"; 
 ?>
 
 <!DOCTYPE html>

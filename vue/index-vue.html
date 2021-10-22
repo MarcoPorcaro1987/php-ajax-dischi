@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>PHP vue dischi</title>
+</head>
+<body>
+    <div id="root">
+        <header class="head-cont">
+            <div class="logo">
+                <img src="img/spotify-logo.png" alt="Logo Spotify" />
+            </div>
+            <div>
+                <select>
+                    <option value="" selected>Scegli un genere</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Metal">Metal</option>
+                </select>
+            </div>
+        </header>
+        <main>
+            <div class="container albums-cont">
+                <div
+                class="album-cont"
+                v-for="(album, index) in albums"
+                :key="index"
+                >
+                    <div class="album">
+                        <img :src="album.poster" alt="album.title" />
+                        <div class="title">{{ album.title }}</div>
+                        <p class="author">{{ album.author }}</p>
+                        <p class="year">{{ album.year }}</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
+
+
